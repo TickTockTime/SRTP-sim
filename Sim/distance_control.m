@@ -19,9 +19,18 @@ x1 = v1.*t;
 
 % Leader2参数
 % x2 = [t.*v1y-exp(4.*t)./((exp(8.*t)./4-1/8).^(1/2)); t.*v1y-exp(4.*t)./((exp(8.*t)./4+7/4).^(1/2))];
+figure(1);
 x2 = [t.*v1y-exp(4.*t)./((exp(8.*t)./4-1/8).^(1/2)); t.*v1y-1./((2.*t+1/8).^(1/2))];
 plot(x1(1,:), x1(2,:),'r-','LineWidth',2);hold on
 plot(x2(1,:), x2(2,:),'b','LineWidth',2);hold on
 
 xlabel('x/m');
 ylabel('y/m');
+
+figure(2);
+fd = t.*v1y-exp(4.*t)./((exp(8.*t)./4-1/8).^(1/2))-sqrt(2)/2.*t;
+plot(t, fd);hold on
+
+figure(3)
+sd = t.*v1y-1./((2.*t+1/8).^(1/2))-sqrt(2)/2.*t;
+plot(t, sd);hold on
