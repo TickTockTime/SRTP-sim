@@ -73,7 +73,7 @@ scatter3(x3x(1,l),x3y(1,l),x3z(1,l),'filled');
 scatter3(x4x(1,l),x4y(1,l),x4z(1,l),'filled');
 axis([-3,3,-3,3,0,6]);
 title('编队跟随')
-legend('f1','f2','f3','f4');
+legend('l1','f1','f2','f3','f4');
 xlabel("x");
 ylabel("y");
 zlabel("z");
