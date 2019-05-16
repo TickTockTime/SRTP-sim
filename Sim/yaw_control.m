@@ -28,6 +28,15 @@ plot(t, yaw2_1, "--", 'LineWidth',1.5);hold on
 plot(t, yaw2_2, "-.", 'LineWidth',1.5);hold on
 plot(t, yaw2_3, "--", 'LineWidth',1.5);hold on
 plot(t, yaw2_4, "--", 'LineWidth',1.5);hold on
-
+title('偏航角控制');
+legend('yaw1','yaw2-1','yaw2-2','yaw2-3','yaw2-4');
 xlabel('t/s');
 ylabel('yaw/rad');
+
+% figure(2)
+% for i=1:1:401
+%     clf
+%     line([0 sin(yaw1(i))],[0 cos(yaw1(i))]);
+%     axis([-2,2,-2,2]);
+%     pause(0.1);
+% end

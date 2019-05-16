@@ -39,13 +39,22 @@ sd=exp((expect_sd.^2).*t)./((exp(2.*(expect_sd.^2).*t)/(expect_sd.^2)-1/(expect_
 % Leader2全局坐标系下的轨迹
 x2=R*[v1x.*t-fd;v1y.*t-sd];
 
-% fd、sd收敛情况
-figure(1)
-plot(t, fd);hold on
-figure(2)
-plot(t, sd);hold on
+% % fd、sd收敛情况
+% figure(1)
+% plot(t, fd);hold on
+% figure(2)
+% plot(t, sd);hold on
+% 
+% % Leader系统的轨迹
+% figure(3)
+% plot(x1(2,:), x1(1,:));hold on
+% plot(x2(2,:), x2(1,:));hold on
 
-% Leader系统的轨迹
-figure(3)
-plot(x1(2,:), x1(1,:));hold on
-plot(x2(2,:), x2(1,:));hold on
+
+% figure(4)
+% axis([-5,8,-5,8]);
+% for i=1:1:100
+%     scatter(x1(2,i), x1(1,i));hold on
+%     scatter(x2(2,i), x2(1,i));hold on
+%     pause(0.1);
+% end
